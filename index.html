@@ -9,12 +9,30 @@
         <script type="text/javascript" src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
         <script type="text/javascript">
             $(document).ready(function(){
-                $('button').click(function(){
-                    $("addClass").addClass("red");
+                
+                $('#addClass_btn').click(function(){
+                    $("#addClass").addClass("red");
                 })
 
+                $('#slidetoggle_btn').click(function(){
+                    $("#slidetoggle").slideToggle("slow");
+                })
+                
+                $('#append_btn').click(function(){
+                    $("#append").append(". Append this extra text, please!");
+                })
 
+                $('#hide_btn').click(function(){
+                    $("#hide").hide();
+                })
 
+                 $('#show_btn').click(function(){
+                    $("#show").show();
+                })
+
+                  $('#fadeout_btn').click(function(){
+                    $("#fadeout").fadeOut("slow");
+                })
 
 
             })
@@ -24,33 +42,54 @@
     <body>
         <div class="container">
             <div class="jqFunction">
-                <button>Add Class</button>
+                <button id="addClass_btn">Add Class</button>
                 <div class="jqText">
                     <h1>Add Class</h1>
-                    <p id="addClass">Click the button to add class 'red' to this paragraph.</p>
+                    <p id="addClass">Click the button to add class 'red' to this paragraph</p>
                 </div>
             </div>
             <div class="jqFunction">
+                <button id="slidetoggle_btn">Slidetoggle</button>
+                <div class="jqText">
+                    <h1>Slidetoggle</h1>
+                    <p id="slidetoggle">Click the button to slidetoggle a hidden image</p>
+                </div>
+            </div>
+            <div class="jqFunction">
+                <button id="append_btn">Append</button>
+                <div class="jqText">
+                    <h1>Append</h1>
+                    <p id="append">Click the button to append some more text</p>
+                </div>
+            </div>
+            <div class="jqFunction">
+                <button id="hide_btn">Hide</button>
+                <div class="jqText">
+                    <h1>Hide</h1>
+                    <p id="hide">Click the button to hide the paragraph</p>
+                </div>
+            </div>
+            <div class="jqFunction">
+                <button id="show_btn">Show</button>
+                <div class="jqText">
+                    <h1>Show</h1>
+                    <p id="show">Here I am! You must have clicked the button...</p>
+                </div>
+            </div>
+            <div class="jqFunction">
+                <button id="fadeout_btn">Fade Out</button>
+                <div class="jqText">
+                    <h1>Fade Out</h1>
+                    <p id="fadeout">Click the button to fade out the text</p>
+                </div>
+            </div>
+            <!-- <div class="jqFunction">
                 <button>Some button</button>
                 <div class="jqText">
                     <h1>Some Header Text here...</h1>
                     <p>Some other smaller text here...</p>
                 </div>
-            </div>
-            <div class="jqFunction">
-                <button>Some button</button>
-                <div class="jqText">
-                    <h1>Some Header Text here...</h1>
-                    <p>Some other smaller text here...</p>
-                </div>
-            </div>
-            <div class="jqFunction">
-                <button>Some button</button>
-                <div class="jqText">
-                    <h1>Some Header Text here...</h1>
-                    <p>Some other smaller text here...</p>
-                </div>
-            </div>
+            </div> -->
         </div>
     </body>
 </html>
